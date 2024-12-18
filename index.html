@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Land of Procrastination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fef8e7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffcc00;
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .content {
+            margin: 20px;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c70039;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to the Land of Procrastination
+    </header>
+    <div class="content">
+        <p>
+            You’ve made it to the most important page on the internet.<br>
+            But don’t worry, you can leave whenever you want... or can you? 👀
+        </p>
+        <button onclick="alert('Nope! Try again later. 😜');">
+            Escape Button
+        </button>
+        <p style="margin-top: 30px;">
+            Need some inspiration? Here's a random motivational quote:
+        </p>
+        <blockquote id="quote">"The best way to get something done is to begin... unless you want to take a nap first."</blockquote>
+        <button onclick="generateQuote();">Generate New Quote</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 Procrastination Inc. All rights wasted.</p>
+    </footer>
+    <script>
+        const quotes = [
+            "Why do today what you can put off until tomorrow?",
+            "The road to success is paved with coffee and good intentions.",
+            "A clean desk is a sign of a cluttered mind... or avoidance.",
+            "Life's too short to work hard... take a break!",
+            "Even Rome wasn't built in a day, so why rush?"
+        ];
+
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').innerText = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
